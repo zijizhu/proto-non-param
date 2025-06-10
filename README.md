@@ -45,7 +45,7 @@ python train.py --data-dir <dataset-root> --log-dir <log-directory>
 ```
 
 To evaluate the trained model:
-- First change line 19 of [`eval/utils.py`](https://github.com/zijizhu/proto-non-param/blob/main/eval/utils.py#L166) so it point to `<dataset-root>`.
+- First change line 19 of [`eval/utils.py`](https://github.com/zijizhu/proto-non-param/blob/main/eval/utils.py#L19) so it point to `<dataset-root>`.
 - Run the following command after changing the argument to the previous logging directory that contains training artifacts (keep `ckpt.pth` at the end):
 ```sh
 python evaluate.py --ckpt-path <log-directory>/ckpt.pth
