@@ -6,8 +6,8 @@ This repository presents the official PyTorch implementation for the paper "Inte
 ## Environment Setup
 
 Setting up the environment involves the following steps:
-- Installing required Python packages listed in `requirements.txt`,
-- Installing `dinov2` without its dependencies for better compatibility (mainly to exclude `xformers`). We use commit `e1277af` of `dinov2` repository. Additionally, please ensure the PyTorch version meets `torch<2.4.0` to avoid performance regression.
+- Install required Python packages listed in `requirements.txt`,
+- Install `dinov2` without its dependencies for better compatibility (mainly to exclude `xformers`). We use commit `e1277af` of `dinov2` repository. Additionally, please ensure the PyTorch version meets `torch<2.4.0` to avoid performance regression.
 
 To install Python packages used in this repository:
 ```sh
@@ -45,7 +45,7 @@ python train.py --data-dir <dataset-root> --log-dir <log-directory>
 ```
 
 To evaluate the trained model:
-- First change line 19 of [`eval/utils.py`](https://github.com/zijizhu/proto-non-param/blob/main/eval/utils.py#L19) so it point to `<dataset-root>`.
+- First change line 19 of [`eval/utils.py`](https://github.com/zijizhu/proto-non-param/blob/main/eval/utils.py#L19) so it points to `<dataset-root>`.
 - Run the following command after changing the argument to the previous logging directory that contains training artifacts (keep `ckpt.pth` at the end):
 ```sh
 python evaluate.py --ckpt-path <log-directory>/ckpt.pth
